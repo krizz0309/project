@@ -1,0 +1,311 @@
+//No Script
+
+<html>
+<body>
+<script>
+document.write("BCA 4th Semester")
+</script>
+<noscript>CSIT 4th Semester</noscript>
+</body>
+</html>
+
+
+//Operators
+
+<html>
+<body>
+<script>
+var x=1;
+var y=2;
+var z="2";
+//Arithmetic operators
+console.log("Addition operator:"+(x+y));
+//Assignment operators
+console.log("+= operator:"+(x+=y));
+console.log("Value of x is:"+x);
+//Comparision operators
+console.log("Are x and y equal?"+(x==y));
+console.log("Value of x: "+(x--));
+console.log("Value of x: "+x);
+//x--;
+console.log("Are x and y equal?"+(x===y));
+console.log("Are x and y equal?"+(x===z));
+console.log("Are x and y equal?"+(x==z));
+//Logical operators
+console.log((x===y) && x>1);
+console.log((x===y) && x>y);
+console.log((x===y) || x>y);
+//Ternary and typeof operator
+console.log(typeof x);
+console.log(typeof x == "number"? "x is number": "x is not a number");
+</script>
+</body>
+</html>
+
+//Control Structures
+
+<html>
+<head>
+<title>Conditional</title>
+</head>
+<body>
+<h1 id="voting"></h1>
+<h1 id="classRoutine"></h1>
+<script>
+var age=18;
+var className="Scripting Language";
+
+if(age>=18){
+document.getElementById("voting").innerHTML="You are eligible for voting.";
+}else{
+document.getElementById("voting").innerHTML="You can't cast vote for now.";
+}
+
+switch(className){
+case "Scripting Language":
+	document.getElementById("classRoutine").innerHTML="Welcome to Scripting Language class!";
+	break;
+case "Operating System":
+	document.getElementById("classRoutine").innerHTML="Welcome to Operating System class!";
+	break;
+case "Numerical Methods":
+	document.getElementById("classRoutine").innerHTML="Welcome to Numerical Methods class!";
+	break;
+default:
+	document.getElementById("classRoutine").innerHTML="Not feasible subject!";
+	break;
+}
+</script>
+</body>
+</html>
+
+<html>
+<head>
+<title>Loop</title>
+</head>
+<body>
+<script>
+
+var i=1;
+
+for(var j=1;j<=5;j++){
+document.write(j+ " For loop"+"<br>");
+}
+while(i<=5){
+document.write(i+" While Loop"+"<br>");
+i++;
+}
+
+i=1;
+do{
+document.write(i+" Do While"+"<br>");
+i++;
+}while(i<=5);
+
+var test=["Ram","Hari","Shyam"];
+
+for(var i in test){
+document.write("for...in "+i+"<br>");
+document.write("for...in "+test[i]+"<br>");
+}
+
+const obj = { NS: 200, PULSAR: 150, DIO: 105 };
+
+for (var i in obj) {
+  document.write(i+" = "+obj[i]+" cc"+"<br>");
+}
+
+const obj1 = { NS: "200 cc", PULSAR: "150 cc", DIO: "105 cc" };
+
+for (var i in obj1) {
+  document.write(i+" = "+obj1[i]+"<br>");
+}
+
+for(var i of test){
+document.write("for...of "+ i+"<br>");
+}
+
+test.forEach(name=>document.write("forEach "+name+"<br>"));
+
+</script>
+</body>
+</html>
+
+<html>
+<head>
+<title>Jump</title>
+</head>
+<body>
+<script>
+
+var fruits=["Apple","Banana","Mango","Grape","Orange"];
+
+for(var j=1;j<=15;j++){
+if(j%2==0){
+continue;
+}
+if(j>10){
+break;
+}
+document.write(j+ " continue and break"+"<br>");
+}
+
+var basket="";
+cart: {
+basket+=fruits[0]+" ";
+basket+=fruits[1]+" ";
+basket+=fruits[2]+" ";
+break cart;
+basket+=fruits[3]+" ";
+basket+=fruits[4]+" ";
+}
+document.write("My basket: "+basket);
+</script>
+</body>
+</html>
+
+//Array
+
+<html>
+<head>
+<title>Arrays</title>
+</head>
+<body>
+<script>
+
+//Constructor Property
+var friends=new Array("Bipin","Rustam","Sunil");
+document.write(friends.constructor);
+
+//Length property
+document.write("<br>");
+document.write("Length of array: "+friends.length);
+
+//Prototype property
+var test=new Array(1,2,3,4,5);
+Array.prototype.myTestcase = function() {
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i]*100;
+  }
+};
+document.write("<br>");
+test.myTestcase();
+document.write(test);
+
+document.write("<br>");
+document.write(friends.join("<br>"));
+
+friends.push("Harish","Baibhav");
+document.write("<br>");
+document.write("After pushing 2 elements: "+friends.join("<br>"));
+
+friends.pop();
+document.write("<br>");
+document.write("After removing an element: "+friends.join("<br>"));
+
+document.write("<br>");
+document.write("Index of Harish: "+friends.indexOf("Harish"));
+document.write("<br>");
+document.write("Index of Harish from Rustam: "+friends.indexOf("Rustam",2));
+
+document.write("<br>");
+var afterConcat=test.concat(friends);
+document.write("After concatenation of 2 arrays: "+afterConcat.join("<br>"));
+
+</script>
+</body>
+</html>
+
+<html>
+<head>
+<title>Multi-dimensional Array</title>
+</head>
+<body>
+<script>
+
+var multiDimensionalArray=[
+["Ram","Magar",21],
+["Sita","Neupane",22],
+["Hari","Pandey",19],
+["Gita","Shrestha",21]
+];
+document.write(multiDimensionalArray.join("<br>"));
+
+multiDimensionalArray.pop();
+document.write("<br>");
+document.write("After removing an element: "+multiDimensionalArray.join("<br>"));
+
+
+multiDimensionalArray.push(["Gita","Shrestha",21]);
+document.write("<br>");
+document.write("After pushing 1 element: "+multiDimensionalArray.join("<br>"));
+
+</script>
+</body>
+</html>
+
+
+//Defining and invoking functions
+
+<html>
+<head>
+<title>Functions</title>
+</head>
+<body>
+<script>
+
+function withNoParameterAndReturnType(){
+document.write("Hello BCA 4th Semester!"+"<br>");
+}
+
+withNoParameterAndReturnType();
+
+function withParametersAndNoReturnType(firstName, lastName){
+document.write("Hello "+ firstName +" "+ lastName +" of BCA 4th Semester!"+"<br>");
+}
+
+withParametersAndNoReturnType("Sushant","Bastakoti");
+
+function withParametersAndReturnType(firstNumber, secondNumber){
+return firstNumber+secondNumber;
+}
+
+document.write("Sum of two numbers: "+ withParametersAndReturnType(100,99) +"<br>");
+
+
+//Argument objects
+
+function usingArguments(){
+document.write("Hello "+ arguments[0] +" "+ arguments[1]+"<br>");
+}
+
+usingArguments("Sushant","Bastakoti");
+
+
+//Nested Functions
+function displaySquare(number){
+	function calculateSquare(){
+		return number*number;
+	}
+return calculateSquare();
+}
+document.write("Square is: "+displaySquare(3)+"<br>");
+
+//Arrow function
+const quotient=(dividend,divisor)=>{
+return dividend/divisor;
+}
+document.write("Division is: "+quotient(15,3)+"<br>");
+
+
+//Function expressions
+const addition = function (number1,number2) {
+  return number1 + number2;
+};
+document.write("Sum is: "+addition(3,7)+"<br>");
+
+
+
+</script>
+</body>
+</html>
